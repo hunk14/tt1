@@ -1,0 +1,20 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7.6
+    steps:
+      - checkout
+      
+      - run:
+          command: |
+            python3 vitualenv
+            . venv/bin/activate
+            pip install -r requirements.txt
+      
+      - run:
+          name: Running tests
+          command: |
+            . venv/bin/activate
+            python3 tests.py
+     
