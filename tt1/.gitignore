@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+AAA
+.docker
+.config
+NUTSER.DAT
+AppData
+.git
